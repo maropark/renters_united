@@ -1,13 +1,10 @@
 const { Pool } = require("pg");
-
-// Configure the database connection pool
 const pool = new Pool({
-  user: "app_user",
-  host: "localhost",
-  database: "renters_united",
-  password: "laBamssi2024Renters",
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
-// Export the pool to be used in other modules
 module.exports = pool;
