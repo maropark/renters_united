@@ -1,22 +1,26 @@
-const express = require('express');
-const { Pool } = require('pg');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const nodemailer = require('nodemailer');
+const express = require("express");
+const pool = require("./db"); // Correct import
+const initializeDatabase = require("./models/userModel"); // Import the function
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
+
+// Middleware to parse JSON bodies
 app.use(express.json());
 
-const pool = new Pool({
-  user: 'app_user',
-  host: 'localhost',
-  database: 'renters_united',
-  password: 'secure_password',
-  port: 5432,
+// Middleware to parse application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+
+// Initialize the database (create tables if not present)
+initializeDatabase();
+
+// Set up user routes
+app.use("/api/users", userRoutes);
+
+// Start the server and listen on a specified port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
-// Add your routes and handlers here
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+module.exports = app; // Export the app for potential testing or future use
