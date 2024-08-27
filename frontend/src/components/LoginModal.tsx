@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Modal, Box, Tabs, Tab, Button, TextField, Typography } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import AppleIcon from '@mui/icons-material/Apple';
-import './LoginModal.css';
+import '../styles/LoginModal.css';
 
 interface LoginModalProps {
   open: boolean;

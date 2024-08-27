@@ -21,8 +21,9 @@ code {
 }
 
 .map-container {
-  flex: 2;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
 .rentals-list {
