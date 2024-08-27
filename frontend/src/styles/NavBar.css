@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffd5e6;
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .navbar-center {
+    flex: 0 0 auto;
+  }
+  
+  .navbar-logo {
+    height: 50px;
+    display: block;
+  }
+  
+  .navbar a.nav-link,
+  .navbar .MuiButton-root {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+  }
+  
+  .navbar a.nav-link:hover,
+  .navbar .MuiButton-root:hover {
+    color: #007bff;
+  }
+  
+  /* Adjust MUI Button to match link styling */
+  .navbar .MuiButton-root {
+    min-width: 0;
+    padding: 0;
+    line-height: inherit;
+  }

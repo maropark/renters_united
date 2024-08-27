@@ -1,0 +1,31 @@
+.rental-card {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .rental-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Ensure slider arrows are visible */
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
