@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useCallback } from "react";
+import NavBar from "./components/NavBar";
+import AppRouter from "./appRouter/AppRouter";
+import LoginModal from "./components/LoginModal";
 
 function App() {
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
+  const handleOpenLoginModal = useCallback(() => setIsLoginModalOpen(true), []);
+  const handleCloseLoginModal = useCallback(() => setIsLoginModalOpen(false), []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar onOpenLoginModal={handleOpenLoginModal} />
+      <AppRouter />
+      <LoginModal open={isLoginModalOpen} onClose={handleCloseLoginModal} />
     </div>
   );
 }
