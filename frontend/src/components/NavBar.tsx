@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 import logo from '../assets/logo_words.png';
 import '../index.css';
-import '../styles/NavBar.css'; // We'll create this file for the styles
-
+import '../styles/NavBar.css';
 
 interface NavBarProps {
   onOpenLoginModal: () => void;

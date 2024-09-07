@@ -6,7 +6,7 @@ import Buy from '../pages/Buy';
 const AppRouter: React.FC = () => {
   return (
     <Routes>
-      <Route path="/rent" element={<Rent />} />
+      <Route path="home/rent" element={<Rent />} />
       <Route path="/buy" element={<Buy />} />
     </Routes>
   );

@@ -1,5 +1,19 @@
+:root {
+  --navbar-height: 70px;
+  --navbar-padding: 1rem;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  margin-top: calc(var(--navbar-height) + (var(--navbar-padding) * 2));
+  overflow: hidden;
 }
 
 .App-logo {

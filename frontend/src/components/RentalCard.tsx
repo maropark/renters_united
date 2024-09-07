@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, IconButton } from '@mui/material';
 import Favorite from '@mui/icons-material/Favorite';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Slider from 'react-slick';
-import './RentalCard.css';
+import '../styles/RentalCard.css';
 
 interface RentalProps {
   rental: {

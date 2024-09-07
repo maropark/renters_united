@@ -1,0 +1,32 @@
+.rent-page {
+  display: flex;
+  height: calc(100vh - var(--navbar-height) - (var(--navbar-padding) * 2));
+}
+
+.map-section {
+  flex: 3;
+  height: 100%;
+}
+
+.rentals-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .rent-page {
+    flex-direction: column;
+  }
+
+  .map-section {
+    flex: 3;
+    height: 75%;
+  }
+
+  .rentals-section {
+    flex: 1;
+    height: 25%;
+  }
+}
